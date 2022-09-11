@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
@@ -59,6 +59,55 @@
       margin: 7.5rem 8% 0;
     }
 
+    .card-supervisor {
+      border-radius: .5rem;
+      padding: 2.5rem 3rem;
+      margin-bottom: 3rem;
+      box-shadow: 0 1rem 2rem .5rem #dedede;
+      border-top: .5rem solid hsl(180, 62%, 55%);
+    }
+
+    .card-team-builder {
+      border-radius: .5rem;
+      padding: 2.5rem 3rem;
+      margin-bottom: 3rem;
+      box-shadow: 0 1rem 2rem .5rem #dedede;
+      border-top: .5rem solid hsl(0, 78%, 62%);
+    }
+
+    .card-karma {
+      border-radius: .5rem;
+      padding: 2.5rem 3rem;
+      margin-bottom: 3rem;
+      box-shadow: 0 1rem 2rem .5rem #dedede;
+      border-top: .5rem solid hsl(34, 97%, 64%);
+    }
+
+    .card-calculator {
+      border-radius: .5rem;
+      padding: 2.5rem 3rem;
+      margin-bottom: 3rem;
+      box-shadow: 0 1rem 2rem .5rem #dedede;
+      border-top: .5rem solid hsl(212, 86%, 64%);
+    }
+
+    .card-title {
+      margin: 0;
+      font-size: 2rem;
+      color: hsl(234, 12%, 34%);
+    }
+
+    .card-paragraph {
+      margin: 0;
+      font-size: 1.3rem;
+      color: hsl(229, 6%, 66%);
+    }
+
+    .card-image {
+      padding-top: 3rem;
+      display: flex;
+      justify-content: right;
+    }
 
     footer{
       text-align: center;
@@ -79,6 +128,38 @@
         column-gap: 3rem;
       }
     }
+
+    @media (min-width: 1250px) {
+      .header-paragraph {
+        font-size: 1.3rem;
+      }
+
+      .cards {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas:
+      "start mid1 end"
+      "start mid2 end";
+      }
+
+      .card-supervisor {
+        grid-area: start;
+        align-self: center;
+      }
+
+      .card-team-builder {
+        grid-area: mid1;
+      }
+
+      .card-karma {
+        grid-area: mid2;
+      }
+
+      .card-calculator {
+        grid-area: end;
+        align-self: center;
+      }
+    }
   </style>
 </head>
 <body>
@@ -91,20 +172,39 @@
   </header>
 
   <section class="cards">
-  Supervisor
-  Monitors activity to identify project roadblocks
+    <div class="card-supervisor">
+      <h1 class="card-title">Supervisor</h1>
+      <p class="card-paragraph">Monitors activity to identify project roadblocks</p>
+      <div class="card-image">
+      <img src="icon-supervisor.svg">
+    </div>
+    </div>
 
-  Team Builder
-  Scans our talent network to create the optimal team for your project
+    <div class="card-team-builder">
+      <h1 class="card-title">Team Builder</h1>
+      <p class="card-paragraph">Scans our talent network to create the optimal team for your project</p>
+      <div class="card-image">
+        <img src="icon-team-builder.svg">
+      </div>
+    </div>
 
-  Karma
-  Regularly evaluates our talent to ensure quality
+    <div class="card-karma">
+  <h1 class="card-title">Karma</h1>
+      <p class="card-paragraph">Regularly evaluates our talent to ensure quality</p>
+      <div class="card-image">
+        <img src="icon-karma.svg">
+      </div>
+    </div>
 
-  Calculator
-  Uses data from past projects to provide better delivery estimates
+      <div class="card-calculator">
+    <h1 class="card-title">Calculator</h1>
+        <p class="card-paragraph">Uses data from past projects to provide better delivery estimates</p>
+        <div class="card-image">
+          <img src="icon-calculator.svg">
+        </div>
+      </div>
   </section>
 
-  
   <footer>
     <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>
